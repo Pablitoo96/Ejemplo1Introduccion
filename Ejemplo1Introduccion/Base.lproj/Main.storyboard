@@ -29,20 +29,48 @@
                                     <action selector="subirContador:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRw-2W-Kb9"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-vu-edU">
+                                <rect key="frame" x="20" y="448" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bal-g6-744">
+                                <rect key="frame" x="20" y="531" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGj-LJ-rSw">
+                                <rect key="frame" x="149" y="629" width="117" height="30"/>
+                                <state key="normal" title="Registrar usuario"/>
+                                <connections>
+                                    <action selector="insertarUsuario:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZD-Iu-CFq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vGj-LJ-rSw" secondAttribute="bottom" constant="203" id="2am-VW-KwX"/>
                             <constraint firstItem="l1a-p4-iRI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4WM-8z-Ukv"/>
+                            <constraint firstItem="vGj-LJ-rSw" firstAttribute="top" secondItem="bal-g6-744" secondAttribute="bottom" constant="64" id="9bP-x8-iY7"/>
                             <constraint firstItem="zUq-uK-ME1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="9ju-6V-TGD"/>
+                            <constraint firstItem="vGj-LJ-rSw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="BN8-a4-MLA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5oG-vu-edU" secondAttribute="trailing" constant="20" id="R14-Kz-V8l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zUq-uK-ME1" secondAttribute="trailing" constant="20" id="Rea-t1-pzE"/>
+                            <constraint firstItem="bal-g6-744" firstAttribute="top" secondItem="5oG-vu-edU" secondAttribute="bottom" constant="49" id="SKm-eJ-ymm"/>
+                            <constraint firstItem="5oG-vu-edU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ScL-8n-dC3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l1a-p4-iRI" secondAttribute="trailing" constant="20" id="Xjr-DU-8AS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bal-g6-744" secondAttribute="trailing" constant="20" id="aJU-Zx-yaj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vGj-LJ-rSw" secondAttribute="trailing" constant="148" id="lLm-oR-hIc"/>
                             <constraint firstItem="zUq-uK-ME1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t3b-Th-tP6"/>
                             <constraint firstItem="l1a-p4-iRI" firstAttribute="top" secondItem="zUq-uK-ME1" secondAttribute="bottom" constant="150" id="ulo-IV-oaV"/>
+                            <constraint firstItem="bal-g6-744" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xuR-xN-HvB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lbResultado" destination="zUq-uK-ME1" id="Dw1-N4-sXa"/>
+                        <outlet property="txtEmail" destination="8bC-Xf-vdC" id="coO-LO-BXa"/>
+                        <outlet property="txtPassword" destination="bal-g6-744" id="J7P-WV-C8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
